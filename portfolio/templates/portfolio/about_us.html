@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - Career Canvas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: url('{% static "portfolio/images/adminnn.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: rgba(33, 37, 41, 0.95) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .about-container {
+            background-color: rgba(244, 238, 240, 0.778);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .about-title {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-content {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .feature-box {
+            background-color: #92c94ab3;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .feature-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-text {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Career Canvas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'company_list' %}">Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div class="container">
+        <div class="about-container">
+            <h1 class="about-title">About Career Canvas</h1>
+            
+            <div class="about-content">
+                <p>Welcome to Career Canvas, your comprehensive platform for career development and job opportunities. We connect talented individuals with leading companies, helping you build your professional journey.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h3 class="feature-title">Our Mission</h3>
+                        <p class="feature-text">To empower individuals in their career growth by providing a platform that showcases their skills and connects them with potential employers.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h3 class="feature-title">Our Vision</h3>
+                        <p class="feature-text">To create a world where talent meets opportunity, and every individual can build their dream career path.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <div class="footer">
+        <a href="#" onclick="showFeedbackForm()" class="text-light me-3">Feedback</a>
+        <a href="{% url 'home' %}" class="text-light me-3">Home</a>
+        <a href="{% url 'about_us' %}" class="text-light">About Us</a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
