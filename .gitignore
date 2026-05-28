@@ -1,35 +1,80 @@
+# -----------------------------
 # Python
+# -----------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 
+# -----------------------------
 # Virtual Environment
+# -----------------------------
 venv/
 env/
 ENV/
 
+# -----------------------------
 # Django
+# -----------------------------
 db.sqlite3
 media/
+staticfiles/
 
+# Django migrations (optional)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# -----------------------------
 # Environment Variables
+# -----------------------------
 .env
 
+# -----------------------------
 # VS Code
+# -----------------------------
 .vscode/
 
-# Mac/Linux system files
+# -----------------------------
+# PyCharm
+# -----------------------------
+.idea/
+
+# -----------------------------
+# macOS Files
+# -----------------------------
 .DS_Store
 
-# Windows system files
+# -----------------------------
+# Windows Files
+# -----------------------------
 Thumbs.db
+desktop.ini
 
-# Static build folders
+# -----------------------------
+# Node / Frontend
+# -----------------------------
+node_modules/
 dist/
 build/
 
-# Node modules (only if you use npm)
-node_modules/
-
+# -----------------------------
 # Logs
+# -----------------------------
 *.log
+
+# -----------------------------
+# Python cache
+# -----------------------------
+*.pyo
+*.pyd
+
+# -----------------------------
+# Coverage / Testing
+# -----------------------------
+.coverage
+htmlcov/
+
+# -----------------------------
+# Temporary files
+# -----------------------------
+*.tmp
+*.swp
